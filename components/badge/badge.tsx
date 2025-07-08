@@ -4,10 +4,9 @@ import { useTranslation } from "react-i18next";
 import Gift2FillIcon from "remixicon-react/Gift2FillIcon";
 import PercentFillIcon from "remixicon-react/PercentFillIcon";
 import FlashlightFillIcon from "remixicon-react/FlashlightFillIcon";
-import ShoppingBag3FillIcon from "remixicon-react/ShoppingBag3FillIcon"; // Added for BOGO
 
 type Props = {
-  type: "bonus" | "discount" | "popular" | "bogo"; // Added bogo type
+  type: "bonus" | "discount" | "popular" | "bogo";
   variant?: "default" | "circle";
   size?: "medium" | "large";
 };
@@ -51,9 +50,10 @@ export default function Badge({
       return (
         <span
           className={`${cls.badge} ${cls.bogo} ${cls[variant]} ${cls[size]}`}
+          aria-label={t("buy_one_get_one_free")}
         >
-          <ShoppingBag3FillIcon /> {/* Suitable icon for BOGO */}
-          <span className={cls.text}>{t("buy_one_get_one_free")}</span>
+          <Gift2FillIcon />
+          <span className={cls.text}>{t("bogo_label")}</span> {/* Changed to bogo_label */}
         </span>
       );
     default:

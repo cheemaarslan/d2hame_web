@@ -51,10 +51,10 @@ export default function ProductCard({ data, handleOpen }: Props) {
             <Badge variant="circle" type="discount" />
           </div>
         )}
-        {!!data.is_bogo && (
-          <div className={cls.bogo}>
-            <Badge variant="circle" type="bogo" />
-          </div>
+        {data.is_bogo === 1 && ( // Changed from !!data.is_bogo to explicit check
+          <span className={cls.bogoLabel}>
+            {t("bogo_label")}
+          </span>
         )}
         <FallbackImage
           fill

@@ -42,13 +42,46 @@
       left: 0;
       z-index: 2;
     }
-    .bogo {
-  position: absolute;
-  top: 40px; /* Adjusted to appear below discount badge */
-  left: 8px;
-  z-index: 1;
-}
+ 
   }
+.bogoLabel {
+  position: absolute;
+  top: 0px;
+  left: 143px;
+  z-index: 2;
+  background-color: #f0ae03;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-50%);
+  white-space: nowrap;
+
+  @media (max-width: 1441px) {
+            left: 103px;
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+  @media (max-width: 1025px) {
+            left: 100px;
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+  @media (max-width: 786px) {
+    left: 140px;
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+  @media (max-width: 576px) {
+    left: 14px;
+    font-size: 12px;
+    padding: 6px 10px;
+    border-radius: 4px;
+  }
+}
   .body {
     padding-top: 24px;
     @media (max-width: 576px) {

@@ -27,10 +27,16 @@
       width: 24px;
       height: 24px;
     }
-  }
-  .bogo {
-  background-color: #007bff; /* Blue for BOGO */
+    .bogo {
+  background-color: #1e90ff; /* Vibrant blue (DodgerBlue) */
+  border: 2px solid #104e8b; /* Darker blue border */
+  min-width: 100px; /* Ensure minimum width for text */
+  justify-content: center; /* Center content */
 }
+  }
+
+ 
+
   .text {
     font-size: 12px;
     line-height: 14px;
